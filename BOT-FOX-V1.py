@@ -105,66 +105,66 @@ def send_msg_clan(replay, packet):
 	st_pack = hd + NewpaketLength +paketBody + NewPyloadLength +pyloadbody2+NewTextLength+ replay + Tipy
 	return st_pack
 #############################################
-def send_likes_id(user_id):
-    url = f"https://smartclownxfreefireinfo.vercel.app/like?uid={user_id}&server_name=sea1&key=1925045198"
-    response = requests.get(url)
-    like = response.json()
-    return {
-        "LikesGivenByAPI": f"{get_random_color()}LIKES BY API: {like.get('LikesGivenByAPI')}",
-        "LikesbeforeCommand": f"{get_random_color()}LIKES BEFOR: {like.get('LikesbeforeCommand')}",
-        "LikesafterCommand": f"{get_random_color()}LIKES AFTER: {like.get('LikesafterCommand')}",
-        "UID": f"{get_random_color()}PLAYER UID: {like.get('UID')}"
-    }
+#def send_likes_id(user_id):
+#    url = f"https://smartclownxfreefireinfo.vercel.app/like?uid={user_id}&server_name=sea1&key=1925045198"
+#    response = requests.get(url)
+#    like = response.json()
+#    return {
+#        "LikesGivenByAPI": f"{get_random_color()}LIKES BY API: {like.get('LikesGivenByAPI')}",
+#        "LikesbeforeCommand": f"{get_random_color()}LIKES BEFOR: {like.get('LikesbeforeCommand')}",
+#        "LikesafterCommand": f"{get_random_color()}LIKES AFTER: {like.get('LikesafterCommand')}",
+#        "UID": f"{get_random_color()}PLAYER UID: {like.get('UID')}"
+#    }
 #############################################
-def all_info_id(user_id):
-    url = f"https://scaninfo.net/infofreefire/{user_id}"
-    response = requests.get(url)
-    if response.status_code == 200:
-        try:
-            r = response.json()
-            return {
-    "Account Avatar": f"{get_random_color()}Avatar Image: {r.get('Account Avatar Image', 'N/A')}",
-    "Account Banner": f"{get_random_color()}Banner Image: {r.get('Account Banner Image', 'N/A')}",
+#def all_info_id(user_id):
+#    url = f"https://scaninfo.net/infofreefire/{user_id}"
+#    response = requests.get(url)
+#    if response.status_code == 200:
+#        try:
+#            r = response.json()
+#            return {
+#    "Account Avatar": f"{get_random_color()}Avatar Image: {r.get('Account Avatar Image', 'N/A')}",
+#    "Account Banner": f"{get_random_color()}Banner Image: {r.get('Account Banner Image', 'N/A')}",
 ####################################
-    "Account Booyah Pass": f"{get_random_color()}Booyah Pass: {r.get('Account Booyah Pass', 'N/A')}",
-    "Account Booyah Pass Badges": f"{get_random_color()}Booyah Pass Badges: {r.get('Account Booyah Pass Badges', 'N/A')}",
-    "Account Celebrity Status": f"{get_random_color()}Celebrity Status: {r.get('Account Celebrity Status', 'N/A')}",
-    "Account Character ID": f"{get_random_color()}Character ID: {r.get('Account Character ID', 'N/A')}",
+#    "Account Booyah Pass": f"{get_random_color()}Booyah Pass: {r.get('Account Booyah Pass', 'N/A')}",
+#    "Account Booyah Pass Badges": f"{get_random_color()}Booyah Pass Badges: {r.get('Account Booyah Pass Badges', 'N/A')}",
+#    "Account Celebrity Status": f"{get_random_color()}Celebrity Status: {r.get('Account Celebrity Status', 'N/A')}",
+#    "Account Character ID": f"{get_random_color()}Character ID: {r.get('Account Character ID', 'N/A')}",
 ####################################
-    "Account Create": f"{get_random_color()}Create Time: {r.get('Account Create Time (GMT 0530)', 'N/A')}",
+#    "Account Create": f"{get_random_color()}Create Time: {r.get('Account Create Time (GMT 0530)', 'N/A')}",
 ####################################
-    "Account Evo Badge": f"{get_random_color()}Evo Access Badge: {r.get('Account Evo Access Badge', 'N/A')}",
-    "Account Honor Score": f"{get_random_color()}Honor Score: {r.get('Account Honor Score', 'N/A')}",
-    "Account Language": f"{get_random_color()}Language: {r.get('Account Language', 'N/A')}",
+#    "Account Evo Badge": f"{get_random_color()}Evo Access Badge: {r.get('Account Evo Access Badge', 'N/A')}",
+#    "Account Honor Score": f"{get_random_color()}Honor Score: {r.get('Account Honor Score', 'N/A')}",
+#    "Account Language": f"{get_random_color()}Language: {r.get('Account Language', 'N/A')}",
 ####################################
-    "Account Last": f"{get_random_color()}Last Login: {r.get('Account Last Login (GMT 0530)', 'N/A')}",
+#    "Account Last": f"{get_random_color()}Last Login: {r.get('Account Last Login (GMT 0530)', 'N/A')}",
 #################INFO - V1#####################
-    "Account Level": f"{get_random_color()}Level: {r.get('Account Level', 'N/A')}",
-    "Account Likes": f"{get_random_color()}Likes: {r.get('Account Likes', 'N/A')}",
-    "Account Name": f"{get_random_color()}PLAYER NAME: {r.get('Account Name', 'N/A')}",
-    "Account Recent OB": f"{get_random_color()}Recent OB: {r.get('Account Recent OB', 'N/A')}",
-    "Account Region": f"{get_random_color()}Region: {r.get('Account Region', 'N/A')}",
-    "Account Signature": f"{get_random_color()}Signature: {r.get('Account Signature', 'N/A')}",
-    "Account UID": f"{get_random_color()}PLAYER UID: {r.get('Account UID', 'N/A')}",
-    "Account XP": f"{get_random_color()}XP: {r.get('Account XP', 'N/A')}",
+#    "Account Level": f"{get_random_color()}Level: {r.get('Account Level', 'N/A')}",
+#    "Account Likes": f"{get_random_color()}Likes: {r.get('Account Likes', 'N/A')}",
+#    "Account Name": f"{get_random_color()}PLAYER NAME: {r.get('Account Name', 'N/A')}",
+#    "Account Recent OB": f"{get_random_color()}Recent OB: {r.get('Account Recent OB', 'N/A')}",
+#    "Account Region": f"{get_random_color()}Region: {r.get('Account Region', 'N/A')}",
+#    "Account Signature": f"{get_random_color()}Signature: {r.get('Account Signature', 'N/A')}",
+#    "Account UID": f"{get_random_color()}PLAYER UID: {r.get('Account UID', 'N/A')}",
+#    "Account XP": f"{get_random_color()}XP: {r.get('Account XP', 'N/A')}",
 #############################################
-    "BR Rank Points": f"{get_random_color()}BR Rank Points: {r.get('BR Rank Points', 'N/A')}",
-    "CS Rank Points": f"{get_random_color()}CS Rank Points: {r.get('CS Rank Points', 'N/A')}",
-    "Equipped Items": f"{get_random_color()}Equipped Items: {r.get('Equipped Items', {})}",
+#    "BR Rank Points": f"{get_random_color()}BR Rank Points: {r.get('BR Rank Points', 'N/A')}",
+#    "CS Rank Points": f"{get_random_color()}CS Rank Points: {r.get('CS Rank Points', 'N/A')}",
+#    "Equipped Items": f"{get_random_color()}Equipped Items: {r.get('Equipped Items', {})}",
 #############################################
-    "Public Craftland Maps": f"{get_random_color()}Craftland Maps: {r.get('Public Craftland Maps', {})}"
-}
+#    "Public Craftland Maps": f"{get_random_color()}Craftland Maps: {r.get('Public Craftland Maps', {})}"
+#}
 ####################################
-        except ValueError as e:
-            print(f"Error decoding JSON: {e}")
-            return {
-                "error": "Invalid JSON response"
-            }
-    else:
-        print(f"Failed to fetch data: {response.status_code}")
-        return {
-            "error": f"Failed to fetch data: {response.status_code}"
-        }
+#        except ValueError as e:
+#            print(f"Error decoding JSON: {e}")
+#            return {
+#                "error": "Invalid JSON response"
+#            }
+#    else:
+#        print(f"Failed to fetch data: {response.status_code}")
+#        return {
+#            "error": f"Failed to fetch data: {response.status_code}"
+#        }
 ####################################
 def get_status(user_id):
     try:
@@ -319,19 +319,19 @@ def exchange_loop(client, remote, port):
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤCODEX TEAMㅤㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
 #################MENU 1######################
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤMENU V1:ㅤㅤㅤㅤ", dataS.hex())))
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤFOR GET INFO TO UID:ㅤㅤㅤ", dataS.hex())))
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤUSE: /INFO_V1+IDㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤUSE: ㅤ/INFO_V2+IDㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤUSE: /INFO_V3+IDㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤUSE: /INFO_V4+IDㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤFOR GET LIKES TO UID:ㅤㅤㅤ", dataS.hex())))
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤUSE: /LIKES+IDㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))               
-                    time.sleep(2)
+#                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤMENU V1:ㅤㅤㅤㅤ", dataS.hex())))
+#                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
+#                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤFOR GET INFO TO UID:ㅤㅤㅤ", dataS.hex())))
+#                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤUSE: /INFO_V1+IDㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
+#                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤUSE: ㅤ/INFO_V2+IDㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
+#                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤUSE: /INFO_V3+IDㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
+#                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤUSE: /INFO_V4+IDㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
+#                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤFOR GET LIKES TO UID:ㅤㅤㅤ", dataS.hex())))
+#                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤUSE: /LIKES+IDㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
+#                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))               
+#                    time.sleep(2)
 ##################MENU 2#####################
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤMENU V2:ㅤㅤㅤㅤ", dataS.hex())))
+                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤMENU V1:ㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤEMOTE USE:ㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤUSE: /FX1ㅤ>>>>>>ㅤ/FX9ㅤㅤㅤㅤㅤ", dataS.hex())))
@@ -348,7 +348,7 @@ def exchange_loop(client, remote, port):
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
                     time.sleep(2)
 #################MENU 3######################
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤMENU V4:ㅤㅤㅤㅤ", dataS.hex())))
+                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤMENU V2:ㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤTEXT STYLE NEW!ㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤUSE: /FOX-STYLEㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤSPAM INVITION!!ㅤㅤ", dataS.hex())))
@@ -380,19 +380,19 @@ def exchange_loop(client, remote, port):
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}COLOR  Light purple ㅤㅤUSE: /@FOX-LVㅤㅤ", dataS.hex())))
  #################MENU 6######################
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤMENU V5:ㅤㅤㅤㅤ", dataS.hex())))
+                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤMENU V3:ㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))                    
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤLAG YOUR ACCOUNT!!?:ㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤUSE: / LAG:ㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤADD YOUTUBERS!:ㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤUSE: / FOX-YT:ㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤMENU V6:ㅤㅤㅤㅤ", dataS.hex())))
+                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤMENU V4:ㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤ SPY AND DESTROY SQUAD:ㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤUSE: @FOX-SPY:ㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤFOR STOP SPY:ㅤㅤㅤㅤ", dataS.hex())))
-                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤUSE: #FOX-STOP:ㅤㅤㅤㅤ", dataS.hex())))
+                    client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤYOU NEED STOP VPNㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ", dataS.hex())))
                     client.send(bytes.fromhex(send_msg_clan(f"{get_random_color()}ㅤㅤBY CODEX TEAMㅤㅤ", dataS.hex())))
                 elif b"@LOVE" in dataS:
